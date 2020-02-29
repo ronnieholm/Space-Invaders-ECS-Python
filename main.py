@@ -63,7 +63,7 @@ def start_system() -> None:
             TARGET_TICKS_PER_SECOND
 
         sdl2.SDL_SetWindowTitle(
-            window, f"""Space invaders - Delta: {config.delta_time:.2f}, Render: {frame_render_time} ms""".encode())
+            window, f"""Space Invaders - Delta: {config.delta_time:.2f}, Render: {frame_render_time} ms""".encode())
 
     sdl(sdl2.SDL_DestroyRenderer(renderer))
     sdl(sdl2.SDL_DestroyWindow(window))
