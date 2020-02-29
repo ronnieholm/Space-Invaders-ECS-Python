@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "venv/bin/python3",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": ["--rcfile=pylintrc"],
+    "python.linting.mypyEnabled": true
+}

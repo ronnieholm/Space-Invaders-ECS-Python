@@ -1,0 +1,13 @@
+[MASTER]
+disable=missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+    no-absolute-import,
+    old-division,
+    invalid-name,
+    too-few-public-methods,
+    import-outside-toplevel,
+    wrong-import-position,
+    no-self-use,
+    cyclic-import,
+    line-too-long
