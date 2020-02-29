@@ -21,11 +21,11 @@ def collide(c1: Circle, c2: Circle) -> bool:
 def check_collisions() -> None:
     """Checks every entity for possible collections with every other entity."""
     def inner() -> None:
-        from entities import System
-        for i, e1 in enumerate(System[:-1]):
+        from entities import Entities
+        for i, e1 in enumerate(Entities[:-1]):
             # We only want to check each combination once. The order does
             # matter.
-            for e2 in System[i + 1:]:
+            for e2 in Entities[i + 1:]:
                 for c1 in e1.collisions:
                     for c2 in e2.collisions:
                         # Check every possible collision between two elements,

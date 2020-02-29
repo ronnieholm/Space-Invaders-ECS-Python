@@ -7,7 +7,7 @@ from config import TARGET_TICKS_PER_SECOND, SCREEN_WIDTH, SCREEN_HEIGHT
 import config
 
 
-def start() -> None:
+def start_system() -> None:
     sdl(sdl2.SDL_Init(sdl2.SDL_INIT_EVERYTHING))
     window = sdl(sdl2.SDL_CreateWindow(
         b"Overwritten by game loop",
@@ -18,14 +18,14 @@ def start() -> None:
         window, -1, sdl2.SDL_RENDERER_ACCELERATED))
 
     entities.initialize_bullet_pool(renderer)
-    entities.System.append(entities.create_player(renderer))
+    entities.Entities.append(entities.create_player(renderer))
 
     for i in range(5):
         for j in range(3):
             x = (i / 5) * SCREEN_WIDTH + (entities.ENEMY_SIZE / 2)
             y = j * entities.ENEMY_SIZE + \
                 (entities.ENEMY_SIZE / 2)
-            entities.System.append(
+            entities.Entities.append(
                 entities.create_enemy(renderer, Vec2f(x, y)))
 
     event = sdl2.SDL_Event()
@@ -40,7 +40,7 @@ def start() -> None:
         sdl(sdl2.SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255))
         sdl(sdl2.SDL_RenderClear(renderer))
 
-        for element in entities.System:
+        for element in entities.Entities:
             if element.active:
                 element.draw(renderer)
                 element.update()
@@ -65,4 +65,4 @@ def start() -> None:
 
 
 if __name__ == "__main__":
-    start()
+    start_system()

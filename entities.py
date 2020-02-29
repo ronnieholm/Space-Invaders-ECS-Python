@@ -121,7 +121,7 @@ Bullet_pool: List[Entity] = []
 def initialize_bullet_pool(renderer: sdl2.render.SDL_Renderer) -> None:
     for _ in range(30):
         bullet = create_bullet(renderer)
-        System.append(bullet)
+        Entities.append(bullet)
         Bullet_pool.append(bullet)
 
 
@@ -179,4 +179,4 @@ def create_enemy(renderer: sdl2.render.SDL_Renderer, position: Vec2f) -> Entity:
 
 # From a threading perspective it's okay to make it a global variable. The game
 # is inherently single threaded.
-System: List[Entity] = []
+Entities: List[Entity] = []
