@@ -1,9 +1,9 @@
 # Space-invaders-ECS-Python
 
-A simple Space invaders game to illustrate hardware independent physics and
-organizing code according to the [Entity-Component-System
-architecture](https://en.wikipedia.org/wiki/Entity_component_system). The game
-targets Python 3.6.9 and above.
+A simple Space invaders game to learn about hardware independent physics and how
+to organizing code according to the
+[Entity-Component-System](https://en.wikipedia.org/wiki/Entity_component_system)
+architectural pattern. The game targets Python 3.6.9 and above.
 
 <img src="demo.gif" width="300px">
 
