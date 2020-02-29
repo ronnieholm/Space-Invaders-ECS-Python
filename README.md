@@ -10,7 +10,7 @@ targets Python 3.6.9 and above.
 ## Getting started
 
     $ git clone https://github.com/ronnieholm/Space-invaders-ECS-Python.git
-    $ cd Space-invaders-ECS-python
+    $ cd Space-invaders-ECS-Python
     $ python3 -m venv venv
     $ source venv/bin/activate
     $ pip3 install -r requirements.txt
