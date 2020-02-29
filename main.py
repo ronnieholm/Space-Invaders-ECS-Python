@@ -40,10 +40,9 @@ def start_system() -> None:
         sdl(sdl2.SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255))
         sdl(sdl2.SDL_RenderClear(renderer))
 
-        # Start the draw an update subsystem. In a naïve ECS implementation like
-        # this one, every system iterates through the complete list of all
-        # entities. In more advanced scenarios, a subset of entities would be
-        # selected beforehand.
+        # Start draw and update subsystem. In a naïve ECS implementation every
+        # system iterates through the complete list of entities. Below we
+        # operate on only the active subset of entities.
         for entity in entities.Entities:
             if entity.active:
                 entity.draw(renderer)
