@@ -32,6 +32,7 @@ def check_collisions() -> None:
                         # but only both elements are active, meaning they're
                         # visible.
                         if e1.active and e2.active and collide(c1, c2):
+                            # Raise event to each Entity signalling collision.
                             e1.collision(e2)
                             e2.collision(e1)
 

@@ -10,7 +10,10 @@ import entities
 
 
 class Component(ABC):
-    """Interface that each component must adhere to."""
+    """Interface that each component must adhere to. Strictly speaking, components
+    in ECS are data buckets (only the __init__() part of subclasses), without
+    any behavior. In this simple ECS implementation, we make each component
+    support three events, though they sometimes have a no-op implementation."""
 
     @abstractclassmethod
     def update(cls) -> None:
