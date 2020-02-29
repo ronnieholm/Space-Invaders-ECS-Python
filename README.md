@@ -58,7 +58,8 @@ algorithm gets the job done but isn't the most effective.
 
 ## References
 
-- Based on Gaming in Go [repository](https://github.com/velovix/gaming-in-go)
+- Inspired by Gaming in Go [repository](https://github.com/velovix/gaming-in-go)
   and
   [Youtube](https://www.youtube.com/watch?v=5HCdqV4nQkQ&list=PLOXvU5Ov-cqpjd1_OnczdizY0I64OfH-T)
   series.
+- [A Thought Experiment: Using the ECS Pattern Outside of Game Engines](http://adventures.michaelfbryan.com/posts/ecs-outside-of-games).
