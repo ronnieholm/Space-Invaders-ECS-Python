@@ -40,11 +40,15 @@ def start_system() -> None:
         sdl(sdl2.SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255))
         sdl(sdl2.SDL_RenderClear(renderer))
 
-        for element in entities.Entities:
-            if element.active:
-                element.draw(renderer)
-                element.update()
+        # Start the draw an update subsystem. Here we iterate every entity, but
+        # in more advanced scenarios, perhaps only a subset of entities might be
+        # part of a subsystem.
+        for entity in entities.Entities:
+            if entity.active:
+                entity.draw(renderer)
+                entity.update()
 
+        # Start collision subsystem
         check_collisions()
         sdl(sdl2.SDL_RenderPresent(renderer))
 
