@@ -1,10 +1,9 @@
 # Space-Invaders-ECS-Python
 
-The goal of this simple Space Invaders game is two-fold: (1) learn how to do
-hardware independent physics by making screen movement independent of frame
-rate; (2) learn how to organize code according to the
+The goal of this simple Space Invaders game is to (1) learn how to do frame rate
+independent physics and to (2) learn how to organize code according to the
 [Entity-Component-System](https://en.wikipedia.org/wiki/Entity_component_system)
-architectural pattern by favoring composition over inheritance.
+architectural pattern, favoring composition over inheritance.
 
 The game requires Python 3.6.9 or higher.
 
