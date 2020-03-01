@@ -1,10 +1,10 @@
-# Space-invaders-ECS-Python
+# Space-Invaders-ECS-Python
 
 The goal of this simple Space Invaders game is two-fold: (1) learn how to do
-hardware independent physics. That is make on screen movement independent of
-frame rate; (2) learn how to organize code according to the
+hardware independent physics by making screen movement independent of frame
+rate; (2) learn how to organize code according to the
 [Entity-Component-System](https://en.wikipedia.org/wiki/Entity_component_system)
-architectural pattern. That is favor composition over inheritance.
+architectural pattern by favoring composition over inheritance.
 
 The game requires Python 3.6.9 or higher.
 
@@ -65,4 +65,5 @@ algorithm gets the job done but isn't the most effective.
   and
   [Youtube](https://www.youtube.com/watch?v=5HCdqV4nQkQ&list=PLOXvU5Ov-cqpjd1_OnczdizY0I64OfH-T)
   series.
+- [Entity Component System](https://www.youtube.com/watch?v=5KugyHKsXLQ&list=PLUUXnYtS5hcVFwd4Z794vA-HsoF2OIWlR) video series.
 - [A Thought Experiment: Using the ECS Pattern Outside of Game Engines](http://adventures.michaelfbryan.com/posts/ecs-outside-of-games).
