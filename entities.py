@@ -1,4 +1,4 @@
-from typing import List, Any, Optional, Dict
+from typing import List, Optional, Dict, Type
 import sdl2
 import components
 from collision import Circle
@@ -12,7 +12,7 @@ class Entity:
         self.position = Vec2f(0, 0)
         self.rotation = 0.0
         self.active = False
-        self.components: List["components.Component"] = []
+        self.components: List[components.Component] = []
 
         # Since bullet, enemy, and player are all of type Entity, inside
         # components we can't switch based on entity type. For instance, inside
@@ -25,7 +25,7 @@ class Entity:
         # which is can collide with other entities' collision points.
         self.collisions: List[Circle] = []
 
-    def add_component(self, new: "components.Component") -> None:
+    def add_component(self, new: components.Component) -> None:
         """Adding a component gives the Entity the behavior of it. The new
         component must not share a type with any existing component in the
         Entity. As each component provides unique behavior, there's no reason
@@ -35,7 +35,7 @@ class Entity:
                 raise Exception(type(new))
         self.components.append(new)
 
-    def get_component(self, klass: Any) -> "components.Component":
+    def get_component(self, klass: Type[components.Component]) -> components.Component:
         for component in self.components:
             if isinstance(component, klass):
                 return component
