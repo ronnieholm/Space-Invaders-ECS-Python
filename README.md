@@ -16,10 +16,7 @@ The game requires Python 3.6.9 or higher.
     $ python3 -m venv venv
     $ source venv/bin/activate
     $ pip3 install -r requirements.txt
-
-    # On Windows and Mac install pre-build libsdl2
-    $ pip3 install pysdl2-dll
-
+    $ pip3 install pysdl2-dll   # Windows and Mac only
     $ python3 main.py
     $ deactivate
 
