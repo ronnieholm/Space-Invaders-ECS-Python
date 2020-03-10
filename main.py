@@ -58,6 +58,9 @@ def start_system() -> None:
         # If we're running at half TARGET_TICKS_PER_SECOND, delta is 2. If we're
         # running at double TARGET_TICKS_PER_SECOND, delta becomes 0.5.
         frame_render_time = sdl2.SDL_GetTicks() - frame_start_time
+
+        # Alternatively, we could store just frame_render_time in delta_time and
+        # defer calculation below to each component.
         config.delta_time = (frame_render_time / 1000) * \
             TARGET_TICKS_PER_SECOND
 
