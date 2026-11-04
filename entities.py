@@ -32,14 +32,14 @@ class Entity:
         why we'd need the same behavior twice."""
         for existing in self.components:
             if isinstance(existing, type(new)):
-                raise Exception(type(new))
+                raise ValueError(f"Component of type {type(new).__name__} already exists on this entity.")
         self.components.append(new)
 
     def get_component(self, klass: Type[components.Component]) -> components.Component:
         for component in self.components:
             if isinstance(component, klass):
                 return component
-        raise Exception(klass)
+        raise ValueError(f"Component of type {klass.__name__} not found on entity.")
 
     # Implementing update(), draw(), and collision() sort of make Entity itself
     # a Component. At least if we consider it Entity and Component an

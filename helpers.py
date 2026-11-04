@@ -15,9 +15,9 @@ TResult = TypeVar('TResult')
 def sdl(result: TResult) -> TResult:
     """Checks return value of type c_int or POINTER"""
     if isinstance(result, int) and result < 0:
-        raise Exception(f"SDL pooped itself: {sdl2.SDL_GetError().decode()}")
+        raise ValueError(f"SDL pooped itself: {sdl2.SDL_GetError().decode()}")
     if result == ctypes.pointer(ctypes.c_long(0)):
-        raise Exception(f"SDL pooped itself: {sdl2.SDL_GetError().decode()}")
+        raise ValueError(f"SDL pooped itself: {sdl2.SDL_GetError().decode()}")
     return result
 
 

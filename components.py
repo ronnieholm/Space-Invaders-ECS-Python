@@ -2,7 +2,7 @@ import ctypes
 import os
 import math
 from typing import Dict, List, cast
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 import sdl2
 from helpers import sdl, draw_texture, texture_from_bmp
 import config
@@ -15,18 +15,18 @@ class Component(ABC):
     any behavior. In this simple ECS implementation, we make each component
     support three events, though they sometimes have a no-op implementation."""
 
-    @abstractclassmethod
-    def update(cls) -> None:
+    @abstractmethod
+    def update(self) -> None:
         """Called every frame to update component's game state."""
         raise NotImplementedError
 
-    @abstractclassmethod
-    def draw(cls, renderer: sdl2.render.SDL_Renderer) -> None:
+    @abstractmethod
+    def draw(self, renderer: sdl2.render.SDL_Renderer) -> None:
         """Called every frame to draw component."""
         raise NotImplementedError
 
-    @abstractclassmethod
-    def collision(cls, other: "entities.Entity") -> None:
+    @abstractmethod
+    def collision(self, other: "entities.Entity") -> None:
         """Called every frame for component to react to collision on container
         entity. other is the Entity with which we collided."""
         raise NotImplementedError
